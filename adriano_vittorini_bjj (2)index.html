@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adriano Vittorini – BJJ Karriere</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #2f2f2f;
+      color: white;
+      font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+      line-height: 1.8;
+    }
+    .container {
+      max-width: 900px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+    .flags {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      display: flex;
+      gap: 10px;
+    }
+    .flags img {
+      width: 40px;
+      height: auto;
+      border-radius: 5px;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    section {
+      margin-bottom: 60px;
+    }
+  </style>
+</head>
+<body>
+  <div class="flags">
+    <img src="https://flagcdn.com/w40/br.png" alt="Brasilien">
+    <img src="https://flagcdn.com/w40/it.png" alt="Italien">
+  </div>
+  <div class="container">
+    <h1 class="fade-in">Adriano Vittorini – Ein außergewöhnliches Talent im Brazilian Jiu Jitsu</h1>
+    <section class="fade-in">
+      <p>Zwei Monate Training, null Vorerfahrung – und trotzdem steht Adriano Vittorini bereits auf dem Podest. Mit 15 Jahren bringt er ein Talent auf die Matte, das man nicht lernen kann: Instinkt, Timing und ein Gefühl für Technik.</p>
+      <p>Was ihn auszeichnet, ist nicht nur seine körperliche Präsenz, sondern vor allem seine Fähigkeit, komplexe Bewegungsabläufe intuitiv zu erfassen. Während andere noch überlegen, hat Adriano bereits reagiert. Er beobachtet, analysiert und setzt um – schnell, präzise und mit einem Selbstverständnis, das man bei Anfängern selten sieht.</p>
+      <p>Sein Einstieg ins Brazilian Jiu Jitsu war kein vorsichtiger Versuch, sondern ein direkter Sprung ins kalte Wasser – und er hat sofort bewiesen, dass er schwimmen kann. Nicht durch Glück, sondern durch ein Zusammenspiel aus mentaler Ruhe, Lernfähigkeit und einem natürlichen Gespür für den richtigen Moment.</p>
+    </section>
+    <section class="fade-in">
+      <h2>Trainerstimme</h2>
+      <p style="font-family: Georgia, serif; font-style: italic;">
+        „Adriano hat ein Gefühl für Position und Timing, das man nicht beibringen kann. Er versteht Bewegungen, bevor sie passieren und das nach nur zwei Monaten. So etwas sieht man extrem selten.“
+      </p>
+      <p><strong>- BJJ Team St. Gallen</strong></p>
+      <p>Diese Einschätzung kommt nicht leichtfertig. Sie basiert auf täglichen Beobachtungen im Training, auf Sparringsituationen gegen erfahrenere Partner und auf der Art, wie Adriano mit neuen Techniken umgeht. Er stellt nicht viele Fragen – weil er die Antworten oft schon spürt. Seine Bewegungen sind ruhig, kontrolliert und präzise. Fehler passieren, aber sie wiederholen sich selten.</p>
+    </section>
+    <section class="fade-in">
+      <h2>Trainingsstil &amp; Mindset</h2>
+      <p>Adriano trainiert mit einem klaren Ziel: Verstehen statt Nachmachen. Er will nicht einfach Techniken auswendig lernen – er will wissen, warum sie funktionieren. Diese Haltung zeigt sich in jeder Trainingseinheit. Er beobachtet genau, stellt gezielte Fragen und probiert Dinge aus, bis sie sich natürlich anfühlen.</p>
+      <p>Sein Fokus liegt nicht auf Schnelligkeit oder Kraft, sondern auf Kontrolle, Präzision und Timing. Er nimmt sich Zeit, um Details zu erkennen, die andere übersehen – und genau das macht den Unterschied. Auch im Sparring bleibt er ruhig, analysiert Situationen und passt sich an, ohne hektisch zu werden.</p>
+      <p>Was ihn antreibt, ist nicht der Wunsch zu gewinnen, sondern der Wunsch, besser zu verstehen. Für Adriano ist Brazilian Jiu Jitsu kein Sport, sondern eine Sprache – und er lernt sie mit beeindruckender Geschwindigkeit.</p>
+    </section>
+    <section class="fade-in">
+      <h2>Zukunft &amp; Ziele</h2>
+      <p>Adriano sieht Brazilian Jiu Jitsu nicht als kurzfristige Phase, sondern als langfristigen Weg. Sein Ziel ist es, sich technisch und mental so weiterzuentwickeln, dass er sich auch auf höherem Niveau behaupten kann – national wie international.</p>
+      <p>Er plant, in den kommenden Monaten an weiteren Turnieren teilzunehmen, um Erfahrung zu sammeln und sich mit immer stärkeren Gegnern zu messen. Dabei geht es ihm nicht nur um Medaillen, sondern um Wachstum – als Kämpfer und als Mensch.</p>
+      <p>Langfristig möchte Adriano ein tiefes Verständnis für das gesamte System des BJJ entwickeln – von Guard-Passings über Transitions bis hin zu Submissions auf höchstem Niveau. Er weiß, dass der Weg lang ist. Aber er ist bereit, ihn zu gehen – Schritt für Schritt, Training für Training.</p>
+    </section>
+  </div>
+  <script>
+    const fadeElements = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    fadeElements.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
